@@ -16,30 +16,6 @@ export default class IssueTrackerMain extends Plugin {
 
 		this.addInitialIssueTracker();
 
-		this.addCommand({
-			id: 'open-sample-modal-complex',
-			name: 'Open sample modal (complex)',
-			checkCallback: (checking: boolean) => {
-				// Conditions to check
-				const markdownView = this.app.workspace.getActiveViewOfType(MarkdownView);
-				if (markdownView) {
-					// If checking is true, we're simply "checking" if the command can be run.
-					// If checking is false, then we want to actually perform the operation.
-					if (!checking) {
-						// new SampleModal(this.app).open();
-					}
-
-					const document = markdownView.editor.getDoc();
-					const documentToReplace = document.getValue()
-					const changeDocument = this.renderIssueTrackers(this.settings.patterns, documentToReplace)
-					markdownView.editor.getDoc().setValue(changeDocument)
-
-					// This command will only show up in Command Palette when the check function returns true
-					return true;
-				}
-			}
-		});
-
 		// This adds an editor command that can perform some operation on the current editor instance
 		this.addCommand({
 			id: 'issue-tracker-open-editor',
