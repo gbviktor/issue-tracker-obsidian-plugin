@@ -2,9 +2,9 @@
 	"id": "issue-tracker-obsidian-plugin",
 	"name": "Issue Tracker",
 	"version": "1.0.0",
-	"minAppVersion": "0.15.0",
+	"minAppVersion": "1.3.0",
 	"description": "Link Tasks/Bug references to your issue tracking tool like GitHub/Clickup/Jira etc..",
 	"author": "Victor Bisterfeld",
-	"authorUrl": "https://gbviktor.de",
+	"authorUrl": "https://github.com/gbviktor",
 	"isDesktopOnly": false
 }
