@@ -14,8 +14,7 @@ The "Issue Tracker" plugin for Obsidian is a tool designed for developers and an
     - **Parsing Regular Expression**: Define custom regular expressions to accurately identify references or keywords in your notes.
     - **Result URL**: Set a URL for each pattern, with the ability to access matched groups from the regular expression using $1, $2, etc., allowing for dynamic link creation.
     - **Test Message**: Test how the regular expression works in real-time, ensuring accuracy and effectiveness before applying it to your notes.
-- **Dynamic Document Parsing**: The plugin reads the currently opened document and applies the user-defined issue track patterns, converting specified patterns into clickable links using the defined Result URL.
-- **Seamless Integration**: Works natively within Obsidian, maintaining the look and feel of the environment while adding powerful issue tracking capabilities.
+- **Dynamic Document Parsing**: The plugin reads the currently opened document and applies (manually) the user-defined issue track patterns, converting specified patterns into clickable links using the defined Result URL.
 
 ### Use Cases
 
@@ -28,10 +27,22 @@ The "Issue Tracker" plugin for Obsidian is a tool designed for developers and an
 - In Obsidian, go to `Settings` > `Community Plugins` > `Browse`, and search for "Issue Tracker."
 - Click `Install` and then `Enable` the plugin.
 
+### Usage
+
+- Ensure that you have a defined pattern.
+- Open any document and write text that matches your pattern, such as `CU-39321`.
+- Open Obsidian's command palette, select `Issue Tracker: Apply Issue Trackers`, and the string `CU-39321` will be converted into a link based on your pattern.
+
 ### Configuration
 
 - Access the plugin settings from `Settings` > `Plugins` > `Issue Tracker`.
 - Use the provided form to create and manage your custom issue track patterns.
+
+### Templates:  
+
+#### ClickUp:
+- Pattern: `(CU-)(\w+)`
+- Result URL: `https://app.clickup.com/t/$2`
 
 ### Support and Feedback
 
